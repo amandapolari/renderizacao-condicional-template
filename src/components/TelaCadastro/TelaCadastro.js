@@ -7,16 +7,12 @@ import {
     BackToLoginButton,
 } from './styled';
 
-function TelaCadastro() {
+function TelaCadastro({ changeScreen }) {
     const cadastrar = () => {
         // validação de cadastro ainda será visto mais pra frente no curso
         alert(
             'Cadastro realizado com sucesso, mas falta fazer a prática 3 e remover esse alerta'
         );
-    };
-
-    const mostrarTelaLogin = () => {
-        alert('Faça a prática 2 e remova esse alerta');
     };
 
     return (
@@ -46,7 +42,7 @@ function TelaCadastro() {
 
                 <SendButton onClick={cadastrar}>Cadastrar</SendButton>
 
-                <BackToLoginButton onClick={mostrarTelaLogin}>
+                <BackToLoginButton onClick={() => changeScreen(1)}>
                     Já possuo cadastro
                 </BackToLoginButton>
             </Form>

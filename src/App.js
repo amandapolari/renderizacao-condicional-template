@@ -27,20 +27,25 @@ function App() {
     // DEFININDO ESTADOS:
     const [showScreen, setShowScreen] = useState(1);
 
+    // FUNÇÃO QUE VAI MUDAR O ESTADO:
+    const changeScreen = (referenceValue) => {
+      setShowScreen(referenceValue)
+    }
+
     // USANDO SWITCH CASE:
     switch (showScreen) {
         case 1:
             return (
                 <MainContainer>
                     <GlobalStyled />
-                    <TelaLogin />
+                    <TelaLogin changeScreen={changeScreen}/>
                 </MainContainer>
             );
         case 2:
             return (
                 <MainContainer>
                     <GlobalStyled />
-                    <TelaCadastro />
+                    <TelaCadastro changeScreen={changeScreen}/>
                 </MainContainer>
             );
         case 3:
