@@ -8,13 +8,6 @@ import {
 } from './styled';
 
 function TelaCadastro({ changeScreen }) {
-    const cadastrar = () => {
-        // validação de cadastro ainda será visto mais pra frente no curso
-        alert(
-            'Cadastro realizado com sucesso, mas falta fazer a prática 3 e remover esse alerta'
-        );
-    };
-
     return (
         <FormContainer>
             <h1>Cadastro </h1>
@@ -40,7 +33,9 @@ function TelaCadastro({ changeScreen }) {
                     <Input id="descricao" />
                 </StyledLabel>
 
-                <SendButton onClick={cadastrar}>Cadastrar</SendButton>
+                <SendButton onClick={() => changeScreen(3)}>
+                    Cadastrar
+                </SendButton>
 
                 <BackToLoginButton onClick={() => changeScreen(1)}>
                     Já possuo cadastro

@@ -8,13 +8,11 @@ const GlobalStyled = createGlobalStyle`
   html {
     font-family: sans-serif9;
   }
-
   * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
   }
-
   body {
     background-color: lightslategray;
   }
@@ -29,8 +27,8 @@ function App() {
 
     // FUNÇÃO QUE VAI MUDAR O ESTADO:
     const changeScreen = (referenceValue) => {
-      setShowScreen(referenceValue)
-    }
+        setShowScreen(referenceValue);
+    };
 
     // USANDO SWITCH CASE:
     switch (showScreen) {
@@ -38,21 +36,21 @@ function App() {
             return (
                 <MainContainer>
                     <GlobalStyled />
-                    <TelaLogin changeScreen={changeScreen}/>
+                    <TelaLogin changeScreen={changeScreen} />
                 </MainContainer>
             );
         case 2:
             return (
                 <MainContainer>
                     <GlobalStyled />
-                    <TelaCadastro changeScreen={changeScreen}/>
+                    <TelaCadastro changeScreen={changeScreen} />
                 </MainContainer>
             );
         case 3:
             return (
                 <MainContainer>
                     <GlobalStyled />
-                    <TelaPrincipal />
+                    <TelaPrincipal changeScreen={changeScreen} />
                 </MainContainer>
             );
         default:

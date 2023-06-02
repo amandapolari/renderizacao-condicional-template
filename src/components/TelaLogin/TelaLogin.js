@@ -8,13 +8,6 @@ import {
 } from './styled';
 
 function TelaLogin({ changeScreen }) {
-    const login = () => {
-        // validação de login ainda será visto mais pra frente no curso
-        alert(
-            'Login bem sucedido, mas falta fazer a prática 3 e remover esse alerta'
-        );
-    };
-
     return (
         <FormContainer>
             <h1>LOGIN</h1>
@@ -30,7 +23,7 @@ function TelaLogin({ changeScreen }) {
                     <Input type={'password'} />
                 </StyledLabel>
 
-                <SendButton onClick={login}>Entrar</SendButton>
+                <SendButton onClick={() => changeScreen(3)}>Entrar</SendButton>
 
                 <RegisterButton onClick={() => changeScreen(2)}>
                     Cadastre-se
